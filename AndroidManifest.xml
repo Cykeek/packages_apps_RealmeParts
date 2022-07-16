@@ -68,7 +68,7 @@
                 android:resource="@drawable/ic_homepage_settings" />
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
+                android:value="com.android.settings.category.ia.system" />
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/device_summary" />
@@ -169,17 +169,6 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-        <service
-            android:name="com.realmeparts.DT2WTileService"
-            android:icon="@drawable/ic_dt2w"
-            android:label="@string/dt2w_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
         <service android:name="com.realmeparts.SmartChargingService"
                 android:exported="false">
         </service>
@@ -188,17 +177,6 @@
         </service>
         <service android:name="com.realmeparts.doze.DozeService"
                 android:exported="false">
-        </service>
-        <service
-            android:name="com.realmeparts.FPSTileService"
-            android:icon="@drawable/fps_info_icon"
-            android:label="@string/fps_info_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
         </service>
     </application>
 </manifest>

@@ -17,11 +17,13 @@
  */
 package com.realmeparts;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 
-public class DeviceSettingsActivity extends Activity {
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
+
+public class DeviceSettingsActivity extends CollapsingToolbarBaseActivity {
 
     private DeviceSettings mDeviceSettingsFragment;
 
@@ -29,11 +31,11 @@ public class DeviceSettingsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
         if (fragment == null) {
             mDeviceSettingsFragment = new DeviceSettings();
             getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, mDeviceSettingsFragment)
+                    .add(R.id.content_frame, mDeviceSettingsFragment)
                     .commit();
         } else {
             mDeviceSettingsFragment = (DeviceSettings) fragment;

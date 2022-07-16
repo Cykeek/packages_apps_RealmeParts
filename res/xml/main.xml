@@ -11,11 +11,6 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <Preference
-        android:key="realme_animation"
-        android:layout="@layout/realme_animation" /> 
-        
     <PreferenceCategory
         android:key="charging"
         android:title="@string/smart_charging_main_title">
@@ -95,12 +90,6 @@
             android:icon="@drawable/ic_info_outline_24dp"
             android:title="@string/dnd_title"
             android:summary="@string/dnd_summary" />
-
-        <SwitchPreference
-            android:key="dt2w"
-            android:icon="@drawable/ic_dt2w"
-            android:summary="@string/dt2w_summary"
-            android:title="@string/dt2w_title" />
 
         <Preference
             android:key="doze"
